@@ -36,7 +36,7 @@ func main() {
 		if err != nil {
 			return rerr(c, err)
 		}
-		state, err := decrypt.DataWithFormat(ciphertext, formats.Binary)
+		state, err := decrypt.DataWithFormat(ciphertext, formats.Json)
 		if err != nil {
 			return rerr(c, err)
 		}
@@ -48,7 +48,7 @@ func main() {
 		if err != nil {
 			return rerr(c, err)
 		}
-		branches, err := (&json.BinaryStore{}).LoadPlainFile(plaintext)
+		branches, err := (&json.Store{}).LoadPlainFile(plaintext)
 		if err != nil {
 			return rerr(c, err)
 		}
@@ -75,7 +75,7 @@ func main() {
 		}) != nil {
 			return rerr(c, err)
 		}
-		ciphertext, err := (&json.BinaryStore{}).EmitEncryptedFile(tree)
+		ciphertext, err := (&json.Store{}).EmitEncryptedFile(tree)
 		if err != nil {
 			return rerr(c, err)
 		}
