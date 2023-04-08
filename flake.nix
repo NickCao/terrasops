@@ -20,7 +20,7 @@
           pname = "terrasops";
           version = "unstable-${final.lib.substring 0 8 self.lastModifiedDate}";
           src = self;
-          vendorSha256 = "sha256-S00p3jq5otICoqWBteoAEBnMpGjuyS0jfk0a1wd8/8Q=";
+          vendorSha256 = "sha256-SSvhBPYMuwjaGH++2oOO3fYUXV5T+yz5nqD0y4zep3g=";
         };
       };
     };
