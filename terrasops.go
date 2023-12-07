@@ -6,16 +6,16 @@ import (
 	"net/http"
 
 	"flag"
+	"github.com/getsops/sops/v3"
+	"github.com/getsops/sops/v3/aes"
+	"github.com/getsops/sops/v3/cmd/sops/common"
+	"github.com/getsops/sops/v3/cmd/sops/formats"
+	"github.com/getsops/sops/v3/config"
+	"github.com/getsops/sops/v3/decrypt"
+	"github.com/getsops/sops/v3/keyservice"
+	"github.com/getsops/sops/v3/stores/json"
+	"github.com/getsops/sops/v3/version"
 	"github.com/labstack/echo/v4"
-	"go.mozilla.org/sops/v3"
-	"go.mozilla.org/sops/v3/aes"
-	"go.mozilla.org/sops/v3/cmd/sops/common"
-	"go.mozilla.org/sops/v3/cmd/sops/formats"
-	"go.mozilla.org/sops/v3/config"
-	"go.mozilla.org/sops/v3/decrypt"
-	"go.mozilla.org/sops/v3/keyservice"
-	"go.mozilla.org/sops/v3/stores/json"
-	"go.mozilla.org/sops/v3/version"
 )
 
 var rulesFile = flag.String("rules", ".sops.yaml", "path to sops creation rules")
